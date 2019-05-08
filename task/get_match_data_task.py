@@ -13,8 +13,10 @@ class GetMatchDataTask(threading.Thread):
         self.match_id = match_id
         self.data_fetch = data_match
         self.match_container = match_container
+        self.setDaemon(True)
 
     def run(self):
+
         while self.match_container.is_not_finished(self.match_id) or self.fetch_times == 0:
             self.fetch_times += 1
             message_list = self.data_fetch.get_message_list(self.match_id)

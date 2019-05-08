@@ -6,10 +6,10 @@ class MatchStatus(enum.Enum):
     closed = '已结束'
     created = '已创建'
     inprogress = '进行中'
+    halftime = '半场时间'
 
     @staticmethod
     def get_des(name):
-        print(name)
         for n, des in MatchStatus.__members__.items():
             if des.name == name:
                 return des.value
