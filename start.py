@@ -1,6 +1,7 @@
 import datetime
 import time
 import os
+import sys
 
 from date_fetch import SinaDataFetch
 from match_container import MatchContainer
@@ -49,7 +50,7 @@ while True:
                                                                 match.time))
         select = input('请选择一个比赛(输入 [q/Q] 退出): ')
         if select.lower() == 'q':
-            break
+            sys.exit()
 
         select = int(select)
         if not select in index_id_dict:
