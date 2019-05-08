@@ -1,12 +1,20 @@
 import datetime
-import time
+import logging.handlers
 import os
-import sys
+import time
 
 from date_fetch import SinaDataFetch
 from match_container import MatchContainer
-from task.get_match_data_task import GetMatchDataTask
 from match_status import MatchStatus
+from task.get_match_data_task import GetMatchDataTask
+
+my_logger = logging.getLogger("Logger")
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler = logging.handlers.RotatingFileHandler(filename='log1.log', maxBytes=1024 * 10, backupCount=10)
+handler.setLevel(logging.DEBUG)
+handler.setFormatter(formatter)
+my_logger.addHandler(handler)
+
 
 data_fetch = SinaDataFetch()
 match_container = MatchContainer()
@@ -66,5 +74,5 @@ if __name__ == "__main__":
                 for message in message_list:
                     print(message.des)
                 time.sleep(delay)
-        except:
-            pass
+        except Exception as e:
+            my_logger.error(e)
