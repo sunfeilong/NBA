@@ -93,7 +93,7 @@ class NBALive:
     def select_index(self):
         try:
             print()
-            select = input('请选择一场比赛(输入 [q/Q] 退出):\n ')
+            select = input('请选择一场比赛(输入 [q/Q] 退出): ')
             if select.lower() == 'q':
                 return 0
             if not select.isdigit():
