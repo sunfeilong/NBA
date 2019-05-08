@@ -11,7 +11,6 @@ class HttpRequestUtil:
         try:
             response = request.urlopen(address)
             response_str = response.read().decode('utf-8')
-            self.logger.debug('get data from {}, response: {:}'.format(address, response_str))
             return response_str
         except Exception as e:
             self.logger.error('connect to {} exception, message:{}'.format(address, e))

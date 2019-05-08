@@ -72,8 +72,7 @@ class NBALive:
                         match.visiting_team,
                         match.home_team_score,
                         match.visiting_team_score,
-                        MatchStatus.get_des(
-                            match.status))
+                        MatchStatus.get_des(match.status))
             self.index_match_dict[index] = match.match_id
             length = math.ceil(len(match_format) / width) * width
             result += match_format
@@ -108,14 +107,14 @@ class NBALive:
         return -1
 
     def start(self):
+        # 启动数据获取任务
+        try:
+            nba_live.run_get_match_data_task()
+            nba_live.run_get_match_message_task()
+        except BaseException as e1:
+            self.logger.error(e1)
+            return
         while True:
-            # 启动数据获取任务
-            try:
-                nba_live.run_get_match_data_task()
-                nba_live.run_get_match_message_task()
-            except BaseException as e1:
-                self.logger.error(e1)
-                break
             try:
                 # 输出比赛信息 选择比赛
                 print(self.format_game_list_info())

@@ -1,6 +1,6 @@
+import datetime
 import threading
 import time
-import datetime
 
 
 class GetMatchDataTask(threading.Thread):
@@ -11,10 +11,9 @@ class GetMatchDataTask(threading.Thread):
         self.data_fetch = data_fetch
 
     def run(self):
-        while True:
-            match_list = self.data_fetch.get_match_list(datetime.datetime.fromtimestamp(time.time()))
-            if not match_list:
-                print('no game!')
-            else:
-                for match in match_list:
-                    self.match_container.add_match(match)
+        match_list = self.data_fetch.get_match_list(datetime.datetime.fromtimestamp(time.time()))
+        if not match_list:
+            print('no game!')
+        else:
+            for match in match_list:
+                self.match_container.add_match(match)

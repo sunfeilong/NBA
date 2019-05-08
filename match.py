@@ -1,4 +1,5 @@
 from util import char_util
+from log.logger import LoggerFactory
 
 
 class Message:
@@ -13,6 +14,7 @@ class Match:
     """
 
     def __init__(self, match_id, date, time, status, home_team, visiting_team, home_team_score, visiting_team_score):
+        self.logger = LoggerFactory.get_logger('Match')
         self.match_id = match_id
         self.date = date
         self.time = time
@@ -37,6 +39,7 @@ class Match:
                     self.message_list.append(message)
         else:
             self.message_list.extend(message_list)
+        self.logger.info('after add message message size {}'.format(len(self.message_list)))
 
     def update_score(self, home_team_score, visiting_team_score):
         self.home_team_score = home_team_score
@@ -47,4 +50,3 @@ class Match:
 
     def get_ton_n_message(self, n: int):
         return self.message_list[-n:]
-
