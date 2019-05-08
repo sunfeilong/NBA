@@ -1,0 +1,38 @@
+from match import Match
+from match_status import MatchStatus
+
+
+class MatchContainer:
+    """
+    Game 容存储存在的Game
+    """
+
+    def __init__(self):
+        self.select_match_id = ''
+        self.match = {}
+
+    def add_match(self, match: Match):
+        self.match[match.match_id] = match
+
+    def add_data(self, match_id, data_list):
+        self.__match(match_id).add_data(data_list)
+
+    def get_data(self, match_id, top_n):
+        return self.__match(match_id).get_ton_n_message(top_n)
+
+    def update_score(self, match_id, home_team_score, visiting_team_score):
+        self.__match(match_id).update_score(home_team_score, visiting_team_score)
+
+    def update_select_match_id(self, select_match_id):
+        self.select_match_id = select_match_id
+
+    def is_not_finished(self, match_id):
+        return not self.__match(match_id).status == MatchStatus.closed.name
+
+    def __match(self, match_id) -> Match:
+        if not match_id in self.match:
+            raise Exception('参数非法:{}'.format(match_id))
+        return self.match[match_id]
+
+    def get_match_list(self):
+        return self.match.values()

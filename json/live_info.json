@@ -1,0 +1,54 @@
+{
+  "result": {
+    "status": {
+      "code": 0,
+      "msg": "succ"
+    },
+    "timestamp": "wed may 08 10:15:02 +0800 2019",
+    "data": {
+      "name": "18/19赛季nba季后赛 雄鹿 vs 凯尔特人",
+      "room_id": "sports:201904278",
+      "room_num": "201904278",
+      "match_id": "201272",
+      "discip": "basketball",
+      "league": "nba",
+      "season": "2018",
+      "data_from": "nba",
+      "origin_id": "2019050702",
+      "live_type": "2",
+      "stream_type": "2",
+      "note": "",
+      "start_time": "1557183600",
+      "end_time": "1557201600",
+      "topic": "",
+      "mode": "1",
+      "note_h5": {
+        "text": "",
+        "img": "",
+        "link": "",
+        "flag": "0"
+      },
+      "backgroud": {
+        "img": "",
+        "wap_img": ""
+      },
+      "side_ad": {
+        "img": ""
+      },
+      "guess": {
+        "name": "",
+        "link": ""
+      },
+      "video_type": "0",
+      "video_url": "",
+      "video_node": [],
+      "ctime": "1556346714",
+      "mtime": "1556346714",
+      "creator": "zhaoxing1",
+      "status": "2",
+      "note_url": "",
+      "note_img": "",
+      "note_flag": "0"
+    }
+  }
+}

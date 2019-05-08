@@ -1,0 +1,51 @@
+{
+  "result": {
+    "status": {
+      "code": 0,
+      "msg": "match boxscore"
+    },
+    "timestamp": "Wed May 08 10:09:53 +0800 2019",
+    "data": {
+      "mid": "feb4ae76-49b1-43be-9cde-a2160e1769e4",
+      "season": "2018",
+      "type": "季后赛",
+      "date": "2019-05-07",
+      "time": "07:00",
+      "home_name": "凯尔特人",
+      "home_tid": "583eccfa-fb46-11e1-82cb-f4ce4684ea4c",
+      "home_score": "101",
+      "away_name": "雄鹿",
+      "away_tid": "583ecefd-fb46-11e1-82cb-f4ce4684ea4c",
+      "away_score": "113",
+      "status": "已结束",
+      "status_en": "closed",
+      "duration": "2:22",
+      "quarter": "4",
+      "clock": "00:00",
+      "time_str": "已结束",
+      "home_score1": "30",
+      "home_score2": "19",
+      "home_score3": "23",
+      "home_score4": "29",
+      "home_score5": "",
+      "home_score6": "",
+      "home_score7": "",
+      "home_score8": "",
+      "away_score1": "22",
+      "away_score2": "25",
+      "away_score3": "33",
+      "away_score4": "33",
+      "away_score5": "",
+      "away_score6": "",
+      "away_score7": "",
+      "away_score8": "",
+      "livecast_id": "201272",
+      "cmt_channel": "lives",
+      "cmt_newsid": "lives-sports-2019050702",
+      "news_url": "http://sports.sina.com.cn/basketball/nba/2019-05-07/doc-ihvhiews0280928.shtml",
+      "slide_url": "http://slide.sports.sina.com.cn/k/slide_2_786_213540.html",
+      "video_url": "",
+      "preview_url": ""
+    }
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "result": {
+    "status": {
+      "code": 0,
+      "msg": "day matchs"
+    },
+    "timestamp": "Wed May 08 09:56:35 +0800 2019",
+    "data": {
+      "league": {
+        "season": 2018,
+        "type": "季后赛"
+      },
+      "matchs": [
+        {
+          "mid": "52b87a30-aec2-45c6-851e-8218ac1d7b64",
+          "date": "2019-05-08",
+          "time": "08:00",
+          "status": "inprogress",
+          "quarter": 3,
+          "clock": "00:00",
+          "live_url": "http://sports.sina.com.cn/slamdunk/live.shtml?id=2019050828",
+          "news_url": "",
+          "slide_url": "",
+          "video_url": "",
+          "telecast": [
+            "CCTV5"
+          ],
+          "home": {
+            "name": "猛龙",
+            "tid": "583ecda6-fb46-11e1-82cb-f4ce4684ea4c",
+            "old_tid": 28,
+            "wins": 58,
+            "losses": 24,
+            "score": 92,
+            "scoring": {
+              "score1": 27,
+              "score2": 37,
+              "score3": 28,
+              "score4": "",
+              "score5": "",
+              "score6": "",
+              "score7": "",
+              "score8": ""
+            },
+            "leader": [
+              {
+                "item": "points",
+                "player": "西亚卡姆",
+                "pid": "3df1db1d-6596-489e-8e26-80f60fd9b1f4",
+                "stat": 23
+              },
+              {
+                "item": "rebounds",
+                "player": "莱昂纳德",
+                "pid": "c12fb587-fc86-471c-8a84-19caf31325ce",
+                "stat": 12
+              },
+              {
+                "item": "assists",
+                "player": "洛瑞",
+                "pid": "8c090758-6baa-468d-82fd-d47e17d5091b",
+                "stat": 5
+              }
+            ]
+          },
+          "away": {
+            "name": "76人",
+            "tid": "583ec87d-fb46-11e1-82cb-f4ce4684ea4c",
+            "old_tid": 20,
+            "wins": 51,
+            "losses": 31,
+            "score": 70,
+            "scoring": {
+              "score1": 26,
+              "score2": 17,
+              "score3": 27,
+              "score4": "",
+              "score5": "",
+              "score6": "",
+              "score7": "",
+              "score8": ""
+            },
+            "leader": [
+              {
+                "item": "points",
+                "player": "巴特勒",
+                "pid": "0e163d44-67a7-4107-9421-5333600166bb",
+                "stat": 19
+              },
+              {
+                "item": "rebounds",
+                "player": "西蒙斯",
+                "pid": "318debd7-dab6-4d4e-8849-03c4c701a7c8",
+                "stat": 7
+              },
+              {
+                "item": "assists",
+                "player": "巴特勒",
+                "pid": "0e163d44-67a7-4107-9421-5333600166bb",
+                "stat": 7
+              }
+            ]
+          }
+        },
+        {
+          "mid": "7dcac113-fa20-4858-92e2-9dba97681f09",
+          "date": "2019-05-08",
+          "time": "10:30",
+          "status": "created",
+          "quarter": "",
+          "clock": "",
+          "live_url": "http://sports.sina.com.cn/slamdunk/live.shtml?id=2019050807",
+          "news_url": "",
+          "slide_url": "",
+          "video_url": "",
+          "telecast": [],
+          "home": {
+            "name": "掘金",
+            "tid": "583ed102-fb46-11e1-82cb-f4ce4684ea4c",
+            "old_tid": 7,
+            "wins": 54,
+            "losses": 28,
+            "score": 0,
+            "scoring": {
+              "score1": "",
+              "score2": "",
+              "score3": "",
+              "score4": "",
+              "score5": "",
+              "score6": "",
+              "score7": "",
+              "score8": ""
+            },
+            "leader": [
+              {
+                "item": "points",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              },
+              {
+                "item": "rebounds",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              },
+              {
+                "item": "assists",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              }
+            ]
+          },
+          "away": {
+            "name": "开拓者",
+            "tid": "583ed056-fb46-11e1-82cb-f4ce4684ea4c",
+            "old_tid": 22,
+            "wins": 53,
+            "losses": 29,
+            "score": 0,
+            "scoring": {
+              "score1": "",
+              "score2": "",
+              "score3": "",
+              "score4": "",
+              "score5": "",
+              "score6": "",
+              "score7": "",
+              "score8": ""
+            },
+            "leader": [
+              {
+                "item": "points",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              },
+              {
+                "item": "rebounds",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              },
+              {
+                "item": "assists",
+                "player": "",
+                "pid": "",
+                "stat": ""
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,716 @@
+{
+  "result": {
+    "status": {
+      "code": 0,
+      "msg": "succ mc[5s]"
+    },
+    "timestamp": "Wed May 08 10:16:20 +0800 2019",
+    "data": [
+      {
+        "id": "310389959749407121",
+        "type": "1",
+        "pub_time": "1557202733",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "text": "好啦~本场比赛就到这里啦~我们下次不见不散~",
+        "color": "4",
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202733",
+        "mtime": "1557202733"
+      },
+      {
+        "id": "310389460354597269",
+        "type": "101",
+        "pub_time": "1557202614",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "text": "火勇谁能赢下天王山之战？？",
+        "color": "4",
+        "vote": {
+          "options": [
+            {
+              "id": "310389460354597269_0",
+              "text": "火箭",
+              "percent": "50",
+              "desc": ""
+            },
+            {
+              "id": "310389460354597269_1",
+              "text": "勇士",
+              "percent": "50",
+              "desc": ""
+            }
+          ]
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202614",
+        "mtime": "1557202614"
+      },
+      {
+        "id": "310388727330501015",
+        "type": "203",
+        "pub_time": "1557202439",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "pc": {
+          "i": [
+            "PJ-塔克",
+            "da7d17aa-f245-4710-820c-99d29a7458b4"
+          ],
+          "m": [
+            "41:49",
+            "17",
+            "10",
+            "3",
+            "2",
+            "1",
+            "1",
+            "50",
+            "50",
+            "100",
+            "0",
+            "4"
+          ],
+          "s": [
+            "34.2",
+            "7.3",
+            "5.8",
+            "1.2",
+            "1.6",
+            "0.48",
+            "0",
+            "0.396",
+            "0.377",
+            "0.695",
+            "0.77",
+            "3.1"
+          ],
+          "l": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202439",
+        "mtime": "1557202439"
+      },
+      {
+        "id": "310388701211181470",
+        "type": "203",
+        "pub_time": "1557202433",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "pc": {
+          "i": [
+            "詹姆斯-哈登",
+            "a52b2c84-9c3d-4d6e-8a3b-10e75d11c2bc"
+          ],
+          "m": [
+            "39:57",
+            "38",
+            "10",
+            "4",
+            "0",
+            "2",
+            "1",
+            "44.8",
+            "35.3",
+            "75",
+            "2",
+            "4"
+          ],
+          "s": [
+            "36.8",
+            "36.1",
+            "6.6",
+            "7.5",
+            "2",
+            "0.74",
+            "0",
+            "0.442",
+            "0.368",
+            "0.879",
+            "5",
+            "3.1"
+          ],
+          "l": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202433",
+        "mtime": "1557202433"
+      },
+      {
+        "id": "310388650471936408",
+        "type": "203",
+        "pub_time": "1557202421",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "pc": {
+          "i": [
+            "凯文-杜兰特",
+            "53f2fa48-e61b-49fb-843d-8a3e872257eb"
+          ],
+          "m": [
+            "43:10",
+            "34",
+            "7",
+            "5",
+            "1",
+            "1",
+            "1",
+            "54.5",
+            "33.3",
+            "80",
+            "3",
+            "4"
+          ],
+          "s": [
+            "34.6",
+            "26",
+            "6.4",
+            "5.9",
+            "0.74",
+            "1.1",
+            "0",
+            "0.521",
+            "0.353",
+            "0.885",
+            "2.9",
+            "2"
+          ],
+          "l": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202421",
+        "mtime": "1557202421"
+      },
+      {
+        "id": "310388626848932242",
+        "type": "203",
+        "pub_time": "1557202415",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "pc": {
+          "i": [
+            "斯蒂芬-库里",
+            "8ec91366-faea-4196-bbfd-b8fab7434795"
+          ],
+          "m": [
+            "43:10",
+            "30",
+            "4",
+            "8",
+            "1",
+            "0",
+            "1",
+            "48",
+            "28.6",
+            "100",
+            "3",
+            "3"
+          ],
+          "s": [
+            "33.8",
+            "27.3",
+            "5.4",
+            "5.2",
+            "1.3",
+            "0.36",
+            "0",
+            "0.472",
+            "0.437",
+            "0.916",
+            "2.8",
+            "2.4"
+          ],
+          "l": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ]
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202415",
+        "mtime": "1557202415"
+      },
+      {
+        "id": "310388521212187032",
+        "type": "202",
+        "pub_time": "1557202390",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "tpk": {
+          "i": {
+            "t1": [
+              "火箭",
+              "583ecb3a-fb46-11e1-82cb-f4ce4684ea4c"
+            ],
+            "t2": [
+              "勇士",
+              "583ec825-fb46-11e1-82cb-f4ce4684ea4c"
+            ]
+          },
+          "m": {
+            "t1": [
+              "43.8",
+              "34",
+              "50",
+              "18",
+              "13"
+            ],
+            "t2": [
+              "46.7",
+              "24.2",
+              "43",
+              "24",
+              "11"
+            ]
+          },
+          "s": {
+            "t1": [
+              "0.449",
+              "0.356",
+              "42.1",
+              "21.2",
+              "13.3"
+            ],
+            "t2": [
+              "0.491",
+              "0.385",
+              "46.2",
+              "29.4",
+              "14.3"
+            ]
+          }
+        },
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202390",
+        "mtime": "1557202390"
+      },
+      {
+        "id": "310388419516096925",
+        "type": "104",
+        "pub_time": "1557202365",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "comment": {
+          "uid": "5743451592",
+          "nickname": "xiaojie-71",
+          "content": "哈登mvp\n火箭总冠军",
+          "time": "2019-05-07 12:10:20"
+        },
+        "mid": "5CD1052B-75884F18-156561DC8-840-8E9",
+        "newsid": "lives-sports-2019050710",
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202366",
+        "mtime": "1557202366"
+      },
+      {
+        "id": "310388228348793242",
+        "type": "104",
+        "pub_time": "1557202320",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "comment": {
+          "uid": "5707301075",
+          "nickname": "用户5707301075",
+          "content": "塔克今天表现不错",
+          "time": "2019-05-07 12:10:59"
+        },
+        "mid": "5CD10553-70E043A1-1542E80D3-840-949",
+        "newsid": "lives-sports-2019050710",
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202320",
+        "mtime": "1557202320"
+      },
+      {
+        "id": "310388184274362778",
+        "type": "104",
+        "pub_time": "1557202309",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "comment": {
+          "uid": "6491147895",
+          "nickname": "用户6491147895",
+          "content": "恭喜火箭//@晴子火箭主场连扳两城！系列赛大比分2-2！！贺电在哪里？？！",
+          "time": "2019-05-07 12:11:07"
+        },
+        "mid": "5CD1055A-75881E6E-182E70E77-840-89E",
+        "newsid": "lives-sports-2019050710",
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202309",
+        "mtime": "1557202309"
+      },
+      {
+        "id": "310388082789667229",
+        "type": "1",
+        "pub_time": "1557202285",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "感谢各位收看！拜拜啦！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202285",
+        "mtime": "1557202285"
+      },
+      {
+        "id": "310388068302848411",
+        "type": "3",
+        "pub_time": "1557202282",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "gif": "http://wx1.sinaimg.cn/large/005Tyaevly1g2smkyb404g309i04knpg.gif",
+        "text": "KD和库里连续错失三分机会",
+        "color": "4",
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202282",
+        "mtime": "1557202282"
+      },
+      {
+        "id": "310388046256595344",
+        "type": "1",
+        "pub_time": "1557202276",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "水花兄弟能否找到手感！我们拭目以待！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202276",
+        "mtime": "1557202276"
+      },
+      {
+        "id": "310388005222347156",
+        "type": "1",
+        "pub_time": "1557202267",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "好的！本场比赛就为大家直播到这里！双方各赢两场！下一场在甲骨文球馆！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202267",
+        "mtime": "1557202267"
+      },
+      {
+        "id": "310387735879532952",
+        "type": "2",
+        "pub_time": "1557202202",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "pic": "https://wx2.sinaimg.cn/mw1024/628dfdefly1g2ktbyzf27j20hi09qq83.jpg\r\n",
+        "l_pc": "",
+        "l_wap": "http://e.cn.miaozhen.com/r/k=2118732&p=7OE5d&dx=__IPDX__&rt=2&ns=__IP__&ni=__IESID__&v=__LOC__&xa=__ADPLATFORM__&tr=__REQUESTID__&mo=__OS__&m0=__OPENUDID__&m0a=__DUID__&m1=__ANDROIDID1__&m1a=__ANDROIDID__&m2=__IMEI__&m4=__AAID__&m5=__IDFA__&m6=__MAC1__&m6a=__MAC__&vo=3bca82b4e&vr=2&o=http://tb.cn/tgqSYEw",
+        "text": "这个夏天，来一双透气又好看的篮球鞋吧！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202202",
+        "mtime": "1557202202"
+      },
+      {
+        "id": "310387530916037008",
+        "type": "1",
+        "pub_time": "1557202154",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "杜兰特34分7篮板，伊戈达拉7分8篮板，德拉蒙德-格林15分10篮板，克莱11分7篮板，库里30分8助攻，鲁尼7分！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202154",
+        "mtime": "1557202154"
+      },
+      {
+        "id": "310387417921491351",
+        "type": "1",
+        "pub_time": "1557202127",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "哈登38分10篮板4助攻，塔克17分10篮板，戈登20分4篮板，卡佩拉6分9篮板，保罗13分8篮板，里弗斯10分6篮板，香波特5分！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202127",
+        "mtime": "1557202127"
+      },
+      {
+        "id": "310387274979008919",
+        "type": "102",
+        "pub_time": "1557202093",
+        "liver": {
+          "id": "shixi_dapeng6",
+          "nickname": "晴子",
+          "head_pic": "http://storage.fans.sports.sina.com.cn/reward/2018/05/12/0ffbcaf608ee619edb32cb9bcea3e73f.jpg"
+        },
+        "match": {
+          "phase": "",
+          "time": "",
+          "score1": "",
+          "score2": ""
+        },
+        "text": "火箭主场连扳两城！系列赛大比分2-2！！贺电在哪里？？！",
+        "color": "4",
+        "vie": [],
+        "room_id": "sports:201904279",
+        "liver_id": "shixi_dapeng6",
+        "ctime": "1557202093",
+        "mtime": "1557202093"
+      },
+      {
+        "id": "310387263981834644",
+        "type": "1",
+        "pub_time": "1557202090",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "已结束",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "看下数据！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202090",
+        "mtime": "1557202090"
+      },
+      {
+        "id": "310387171015393686",
+        "type": "1",
+        "pub_time": "1557202068",
+        "liver": {
+          "id": "zhaoxing1",
+          "nickname": "可乐",
+          "head_pic": "http://n.sinaimg.cn/sports/68754999/20180927/timg.jpg"
+        },
+        "match": {
+          "phase": "第四节",
+          "time": "",
+          "score1": "112",
+          "score2": "108"
+        },
+        "text": "正在采访哈登！哈登的眼睛依旧充满血丝！！",
+        "color": "1",
+        "room_id": "sports:201904279",
+        "liver_id": "zhaoxing1",
+        "ctime": "1557202068",
+        "mtime": "1557202068"
+      }
+    ]
+  }
+}
