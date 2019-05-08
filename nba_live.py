@@ -140,5 +140,6 @@ if __name__ == "__main__":
     try:
         nba_live = NBALive('config.cfg')
         nba_live.start()
+        SysCommand.clear()
     except BaseException as e:
         print(e)
