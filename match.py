@@ -1,7 +1,11 @@
+from util import char_util
+
+
 class Message:
     def __init__(self, message_id, des):
         self.message_id = message_id
         self.des = des
+
 
 class Match:
     """
@@ -13,8 +17,8 @@ class Match:
         self.date = date
         self.time = time
         self.status = status
-        self.home_team = home_team
-        self.visiting_team = visiting_team
+        self.home_team = char_util.add_pad(home_team)
+        self.visiting_team = char_util.add_pad(visiting_team)
         self.home_team_score = home_team_score
         self.visiting_team_score = visiting_team_score
         self.message_list = []

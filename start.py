@@ -54,10 +54,18 @@ if __name__ == "__main__":
             # 输出比赛信息 选择比赛
             for index, match in enumerate(match_container.get_match_list()):
                 index_id_dict[index] = match.match_id
-                print('[ {:<2}]: {:<4} VS {:>4} {:>4} {:>5}'.format(index, match.home_team, match.visiting_team,
-                                                                    MatchStatus.get_des(match.status),
-                                                                    match.time))
-            select = input('请选择一个比赛(输入 [q/Q] 退出): ')
+                print('[{:>2} ]: '
+                      '{:>5}'
+                      ' {:<3}VS{:>3}'
+                      ' 当前比分: {:<3}:{:>3} '
+                      '{:>4} '.format(index,
+                                      match.time,
+                                      match.home_team, match.visiting_team,
+                                      match.home_team_score, match.visiting_team_score,
+                                      MatchStatus.get_des(match.status)
+                                      ))
+                print()
+            select = input('请选择一场比赛(输入 [q/Q] 退出):\n ')
             if select.lower() == 'q':
                 break
 
