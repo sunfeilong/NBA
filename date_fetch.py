@@ -89,7 +89,6 @@ class SinaDataFetch(DataFetch):
                         data['text'])
                 message = Message(data['id'], des)
                 result.append(message)
-            except Exception as e:
-                print(e)
+            except:
                 pass
         return result

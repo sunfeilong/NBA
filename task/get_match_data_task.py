@@ -20,4 +20,3 @@ class GetMatchDataTask(threading.Thread):
             message_list = self.data_fetch.get_message_list(self.match_id)
             self.match_container.add_data(self.match_id, message_list)
             time.sleep(self.delay)
-        print('stop')
