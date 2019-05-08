@@ -50,6 +50,7 @@ while True:
                                                                 match.time))
         select = input('请选择一个比赛(输入 [q/Q] 退出): ')
         if select.lower() == 'q':
+            os.system('clear')
             sys.exit()
 
         select = int(select)
