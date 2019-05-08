@@ -50,7 +50,7 @@ if __name__ == "__main__":
             break
 
         index_id_dict = {}
-
+        os.system('clear')
         try:
             # 输出比赛信息 选择比赛
             for index, match in enumerate(match_container.get_match_list()):
