@@ -1,5 +1,6 @@
 import datetime
 import time
+import os
 
 from date_fetch import SinaDataFetch
 from match_container import MatchContainer
@@ -54,6 +55,7 @@ while True:
         print(select_index)
         # 输出比赛信息
         while True:
+            os.system('clear')
             message_list = match_container.get_data(index_id_dict[select_index], 10)
             for message in message_list:
                 print(message.des)
