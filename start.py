@@ -15,7 +15,6 @@ handler.setLevel(logging.DEBUG)
 handler.setFormatter(formatter)
 my_logger.addHandler(handler)
 
-
 data_fetch = SinaDataFetch()
 match_container = MatchContainer()
 task_list = []
@@ -74,5 +73,5 @@ if __name__ == "__main__":
                 for message in message_list:
                     print(message.des)
                 time.sleep(delay)
-        except Exception as e:
+        except BaseException as e:
             my_logger.error(e)
