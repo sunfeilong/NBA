@@ -48,7 +48,6 @@ class SinaDataFetch(DataFetch):
         start = game_list_response.index('(') + 1
         end = game_list_response.index(')')
         json_data = json.loads(game_list_response[start:end])
-        print(json.dumps(json_data))
         match_list = json_data['result']['data']['matchs']
         for match in match_list:
             game = Match(match['mid'], match['date'], match['time'], match['status'], match['home']['name'],
@@ -61,7 +60,6 @@ class SinaDataFetch(DataFetch):
         start = live_response.index('(') + 1
         end = live_response.index(')')
         json_data = json.loads(live_response[start:end])
-        print(json.dumps(json_data))
         return json_data['result']['data']['livecast_id']
 
     @staticmethod
@@ -69,7 +67,6 @@ class SinaDataFetch(DataFetch):
         start = sport_response.index('(') + 1
         end = sport_response.index(')')
         json_data = json.loads(sport_response[start:end])
-        print(json.dumps(json_data))
         return json_data['result']['data']['room_id']
 
     @staticmethod
@@ -78,7 +75,6 @@ class SinaDataFetch(DataFetch):
         start = data_list_response.index('(') + 1
         end = data_list_response.index(')')
         json_data = json.loads(data_list_response[start:end])
-        print(json.dumps(json_data))
         data_list = json_data['result']['data']
         for data in data_list:
             try:
