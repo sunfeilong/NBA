@@ -47,19 +47,22 @@ while True:
             print('[ {:<2}]: {:<4} VS {:>4} {:>4} {:>5}'.format(index, match.home_team, match.visiting_team,
                                                                 MatchStatus.get_des(match.status),
                                                                 match.time))
-        select_index = input('请选择一个比赛: ')
-        select_index = int(select_index)
-        if not select_index in index_id_dict:
-            raise Exception('输入错误:' + str(select_index))
-        match_container.update_select_match_id(index_id_dict[select_index])
-        print(select_index)
+        select = input('请选择一个比赛: (输入 [q/Q] 退出)')
+        if select.lower() == 'q':
+            break
+        select = int(select)
+        if not select in index_id_dict:
+            raise Exception('输入错误:' + str(select))
+        match_container.update_select_match_id(index_id_dict[select])
+        print(select)
         # 输出比赛信息
         while True:
             os.system('clear')
-            message_list = match_container.get_data(index_id_dict[select_index], 10)
+            message_list = match_container.get_data(index_id_dict[select], 10)
             for message in message_list:
                 print(message.des)
             time.sleep(delay)
     except:
         print('请输入一个正确的编号 {}: '.format(list(index_id_dict.keys())))
         pass
+
