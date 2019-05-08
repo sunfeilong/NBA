@@ -3,6 +3,7 @@ import json
 from match import Match
 from match import Message
 from util.http_util import HttpRequestUtil
+from log.logger import LoggerFactory
 
 
 class DataFetch:
@@ -13,7 +14,7 @@ class DataFetch:
         """
         pass
 
-    def get_message_list(self, match_id) -> list:
+    def parse_message_list(self, match_id) -> list:
         """
         获取比赛数据
         :return:
@@ -24,6 +25,7 @@ class DataFetch:
 class SinaDataFetch(DataFetch):
     def __init__(self):
         self.http = HttpRequestUtil()
+        self.logger = LoggerFactory.get_logger('SinaDataFetch')
         self.game_list_address = 'https://slamdunk.sports.sina.com.cn/api?p=radar&s=schedule&a=day&date={}&callback=dayCallback'
         self.data_live_address = 'https://slamdunk.sports.sina.com.cn/api?p=radar&s=boxscore&a=match&callback=cb_matchInfo_f23b83f6_2343_4ee2_8419_8ed143d954c1&mid={}&dpc=1'
         self.data_sport_address = 'http://rapid.sports.sina.com.cn/live/api/live/room?callback=cb_f23b83f6_2343_4ee2_8419_8ed143d954c1&match_id={}&dpc=1'
@@ -31,19 +33,18 @@ class SinaDataFetch(DataFetch):
 
     def get_match_list(self, date) -> list:
         response = self.http.get(self.game_list_address.format(date))
-        return self.__parse_game_list(response)
+        return self.parse_game_list(response)
 
-    def get_message_list(self, match_id) -> list:
+    def parse_message_list(self, match_id) -> list:
         live_response = self.http.get(self.data_live_address.format(match_id))
-        live_id = self.__get_live_id(live_response)
+        live_id = self.get_live_id(live_response)
         sport_response = self.http.get(self.data_sport_address.format(live_id))
-        sport_id = self.__get_sport_id(sport_response)
+        sport_id = self.get_sport_id(sport_response)
         data_response = self.http.get(self.data_list_address.format(sport_id))
-        data_list = self.__get_data_list(data_response)
+        data_list = self.get_message_list(data_response)
         return data_list
 
-    @staticmethod
-    def __parse_game_list(game_list_response):
+    def parse_game_list(self, game_list_response):
         result = []
         start = game_list_response.index('(') + 1
         end = game_list_response.index(')')
@@ -55,22 +56,19 @@ class SinaDataFetch(DataFetch):
             result.append(game)
         return result
 
-    @staticmethod
-    def __get_live_id(live_response):
+    def get_live_id(self, live_response):
         start = live_response.index('(') + 1
         end = live_response.index(')')
         json_data = json.loads(live_response[start:end])
         return json_data['result']['data']['livecast_id']
 
-    @staticmethod
-    def __get_sport_id(sport_response):
+    def get_sport_id(self, sport_response):
         start = sport_response.index('(') + 1
         end = sport_response.index(')')
         json_data = json.loads(sport_response[start:end])
         return json_data['result']['data']['room_id']
 
-    @staticmethod
-    def __get_data_list(data_list_response) -> list:
+    def get_message_list(self, data_list_response) -> list:
         result = []
         start = data_list_response.index('(') + 1
         end = data_list_response.index(')')
@@ -87,8 +85,9 @@ class SinaDataFetch(DataFetch):
                         data['match']['score2'],
                         data['liver']['nickname'],
                         data['text'])
-                message = Message(data['id'], des, data['ctime'], data['mtime'])
+                message = Message(data['id'], des, int(data['ctime']), int(data['mtime']))
                 result.append(message)
-            except:
+            except BaseException as e:
+                self.logger.error('get message list {}'.format(e))
                 pass
         return result

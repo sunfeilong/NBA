@@ -14,7 +14,7 @@ class TestSinaDatFetch(TestCase):
         self.assertIsNotNone(result)
 
     def test_get_data_list(self):
-        result = self.sina_data_fetch.get_message_list('feb4ae76-49b1-43be-9cde-a2160e1769e4')
+        result = self.sina_data_fetch.parse_message_list('feb4ae76-49b1-43be-9cde-a2160e1769e4')
         self.assertIsNotNone(result)
-        result = self.sina_data_fetch.get_message_list('1083c1c5-ddf8-460f-bccf-dc17d509d108')
+        result = self.sina_data_fetch.parse_message_list('1083c1c5-ddf8-460f-bccf-dc17d509d108')
         self.assertIsNotNone(result)
