@@ -87,7 +87,7 @@ class SinaDataFetch(DataFetch):
                         data['match']['score2'],
                         data['liver']['nickname'],
                         data['text'])
-                message = Message(data['id'], des)
+                message = Message(data['id'], des, data['ctime'], data['mtime'])
                 result.append(message)
             except:
                 pass

@@ -116,6 +116,7 @@ class NBALive:
             return
         while True:
             try:
+                SysCommand.clear()
                 # 输出比赛信息 选择比赛
                 print(self.format_game_list_info())
                 index = self.select_index()

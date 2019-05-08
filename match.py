@@ -3,9 +3,11 @@ from log.logger import LoggerFactory
 
 
 class Message:
-    def __init__(self, message_id, des):
+    def __init__(self, message_id, des, ctime, mtime):
         self.message_id = message_id
         self.des = des
+        self.ctime = ctime
+        self.mtime = mtime
 
 
 class Match:
@@ -29,14 +31,17 @@ class Match:
         if not message_list:
             return
         if self.message_list:
-            message_id = 0
+            ctime = 0
             for message in self.message_list:
                 if message.message_id:
-                    message_id = message.message_id
+                    ctime = max(ctime, message.ctime)
 
             for message in message_list:
-                if message_id < message.message_id:
+                if message.ctime and message.ctime > ctime:
                     self.message_list.append(message)
+                    self.logger.info(
+                        'message_id {}, message.message_id:{}, message_des:{}'.format(ctime, message.ctime,
+                                                                                      message.des))
         else:
             self.message_list.extend(message_list)
         self.logger.info('after add message message size {}'.format(len(self.message_list)))
