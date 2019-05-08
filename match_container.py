@@ -14,10 +14,10 @@ class MatchContainer:
     def add_match(self, match: Match):
         self.match[match.match_id] = match
 
-    def add_data(self, match_id, data_list):
-        self.__match(match_id).add_data(data_list)
+    def add_message(self, match_id, data_list):
+        self.__match(match_id).add_message(data_list)
 
-    def get_data(self, match_id, top_n):
+    def get_message(self, match_id, top_n):
         return self.__match(match_id).get_ton_n_message(top_n)
 
     def update_score(self, match_id, home_team_score, visiting_team_score):

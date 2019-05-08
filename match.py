@@ -23,20 +23,20 @@ class Match:
         self.visiting_team_score = visiting_team_score
         self.message_list = []
 
-    def add_data(self, data_list: list):
-        if not data_list:
+    def add_message(self, message_list: list):
+        if not message_list:
             return
         if self.message_list:
-            message_id = ''
+            message_id = 0
             for message in self.message_list:
-                if not message.message_id:
+                if message.message_id:
                     message_id = message.message_id
-                    break
-            for message in reversed(data_list):
-                if not message_id == message.message_id:
+
+            for message in message_list:
+                if message_id < message.message_id:
                     self.message_list.append(message)
         else:
-            self.message_list.extend(data_list)
+            self.message_list.extend(message_list)
 
     def update_score(self, home_team_score, visiting_team_score):
         self.home_team_score = home_team_score
@@ -47,3 +47,4 @@ class Match:
 
     def get_ton_n_message(self, n: int):
         return self.message_list[-n:]
+

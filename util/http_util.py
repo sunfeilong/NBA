@@ -1,16 +1,18 @@
-import logging
 from urllib import request
+
+from log.logger import LoggerFactory
 
 
 class HttpRequestUtil:
     def __init__(self):
-        self.logger = logging.getLogger('HttpRequestUtil')
-        self.logger.setLevel('INFO')
+        self.logger = LoggerFactory.get_logger('HttpRequestUtil')
 
     def get(self, address: str):
         try:
             response = request.urlopen(address)
-            return response.read().decode('utf-8')
+            response_str = response.read().decode('utf-8')
+            self.logger.debug('get data from {}, response: {:}'.format(address, response_str))
+            return response_str
         except Exception as e:
-            self.logger.error('connect to {} exception!, message:{}'.format(address, e))
+            self.logger.error('connect to {} exception, message:{}'.format(address, e))
         return ''

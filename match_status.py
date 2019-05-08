@@ -6,7 +6,7 @@ class MatchStatus(enum.Enum):
     closed = '已结束'
     created = '已创建'
     inprogress = '进行中'
-    halftime = '半场时间'
+    halftime = '半场休息'
 
     @staticmethod
     def get_des(name):

@@ -1,24 +1,20 @@
 import threading
 import time
-
-from date_fetch import DataFetch
-from match_container import MatchContainer
+import datetime
 
 
 class GetMatchDataTask(threading.Thread):
-    def __init__(self, delay, match_id, data_match: DataFetch, match_container: MatchContainer):
+    def __init__(self, match_container, data_fetch):
         super().__init__()
-        self.fetch_times = 0
-        self.delay = delay
-        self.match_id = match_id
-        self.data_fetch = data_match
-        self.match_container = match_container
         self.setDaemon(True)
+        self.match_container = match_container
+        self.data_fetch = data_fetch
 
     def run(self):
-
-        while self.match_container.is_not_finished(self.match_id) or self.fetch_times == 0:
-            self.fetch_times += 1
-            message_list = self.data_fetch.get_message_list(self.match_id)
-            self.match_container.add_data(self.match_id, message_list)
-            time.sleep(self.delay)
+        while True:
+            match_list = self.data_fetch.get_match_list(datetime.datetime.fromtimestamp(time.time()))
+            if not match_list:
+                print('no game!')
+            else:
+                for match in match_list:
+                    self.match_container.add_match(match)
