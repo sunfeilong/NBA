@@ -82,7 +82,7 @@ class SinaDataFetch(DataFetch):
                     des = '[                           ] {:>2}: {:}'.format(data['liver']['nickname'], data['text'])
                 else:
                     time_localtime = time.localtime(int(data['ctime']))
-                    curr_time = '{}:{}'.format(time_localtime.tm_hour, time_localtime.tm_min)
+                    curr_time = '{}:{}:{}'.format(time_localtime.tm_hour, time_localtime.tm_min, time_localtime.tm_sec)
                     des = '[{:>5}][{} 比分:({:<3}:{:>3})] {:>2}: {:}'.format(
                         curr_time,
                         data['match']['phase'],

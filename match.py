@@ -1,13 +1,23 @@
 from util import char_util
 from log.logger import LoggerFactory
+import functools
 
-
+@functools.total_ordering
 class Message:
     def __init__(self, message_id, des, ctime, mtime):
         self.message_id = message_id
         self.des = des
         self.ctime = ctime
         self.mtime = mtime
+
+    def __eq__(self, o: object) -> bool:
+        return self.ctime == getattr(o, 'ctime')
+
+    def __lt__(self, other):
+        return self.ctime < other.ctime
+
+    def __gt__(self, other):
+        return self.ctime > other.ctime
 
 
 class Match:
@@ -38,12 +48,14 @@ class Match:
 
             for message in message_list:
                 if message.ctime and message.ctime > ctime:
+                    ctime = max(ctime, message.ctime)
                     self.message_list.append(message)
                     self.logger.info(
                         'message_id {}, message.message_id:{}, message_des:{}'.format(ctime, message.ctime,
                                                                                       message.des))
         else:
             self.message_list.extend(message_list)
+            self.message_list.sort()
         self.logger.info('after add message message size {}'.format(len(self.message_list)))
 
     def update_score(self, home_team_score, visiting_team_score):
