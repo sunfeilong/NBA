@@ -1,8 +1,6 @@
 ## 项目介绍
 
-命令行NBA文字直播。
-
-基于 Python3 使用表转库开发。
+基于 Python3 标准库开发的命令行NBA文字直播。
 
 数据来源：[新浪NBA](http://sports.sina.com.cn/nba/)
 
@@ -15,7 +13,7 @@
 		python3 nba_live.py
 
 2. 输入序号选择比赛。
-3. `CTRL+C` 返回选择界面。
+3. 在比赛信息界面，`CTRL+C` 返回选择界面。
 
 ## 项目结构  
 
