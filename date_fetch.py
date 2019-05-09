@@ -77,7 +77,7 @@ class SinaDataFetch(DataFetch):
         for data in data_list:
             try:
                 if not data['match']['phase']:
-                    des = '[                    ] {:>2}: {:}'.format(data['liver']['nickname'], data['text'])
+                    des = '                        {:>2}: {:}'.format(data['liver']['nickname'], data['text'])
                 else:
                     des = '[{} 比分:({:<3}:{:>3})] {:>2}: {:}'.format(
                         data['match']['phase'],
