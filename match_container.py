@@ -11,8 +11,13 @@ class MatchContainer:
         self.select_match_id = ''
         self.match = {}
 
-    def add_match(self, match: Match):
-        self.match[match.match_id] = match
+    def add_or_update_match(self, match: Match):
+        if match.match_id in self.match:
+            self.match[match.match_id].home_team_score = match.home_team_score
+            self.match[match.match_id].visiting_team_score = match.visiting_team_score
+            self.match[match.match_id].status = match.status
+        else:
+            self.match[match.match_id] = match
 
     def add_message(self, match_id, data_list):
         self.__match(match_id).add_message(data_list)
@@ -36,3 +41,12 @@ class MatchContainer:
 
     def get_match_list(self):
         return self.match.values()
+
+    def all_match_has_end(self):
+        if not self.match:
+            return True
+
+        for match in self.match.values():
+            if not match.has_closed():
+                return False
+        return True

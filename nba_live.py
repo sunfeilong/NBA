@@ -1,28 +1,22 @@
 import math
 import os
 import time
-from configparser import ConfigParser
 
 from date_fetch import SinaDataFetch
 from log.logger import LoggerFactory
 from match_container import MatchContainer
 from match_status import MatchStatus
+from project_config import ProjectConfig
 from task.get_match_data_task import GetMatchDataTask
 from task.get_match_message_task import GetMatchMessageTask
 from util.sys_command import SysCommand
 
-my_logger = LoggerFactory.get_logger("start")
-
 
 class NBALive:
-    def __init__(self, config_file):
-        self.logger = LoggerFactory.get_logger("RunNBALive")
-        self.config = ConfigParser()
-        self.config.read(config_file)
-        task_s = self.config.sections()[0]
-        match_s = self.config.sections()[1]
-        self.delay = self.config.getint(task_s, 'delay')
-        self.message_size = self.config.getint(match_s, 'messageSize')
+    def __init__(self):
+        self.logger = LoggerFactory.get_logger("NBALive")
+        self.delay = ProjectConfig.get_fetch_message_delay()
+        self.message_size = ProjectConfig.get_show_message_size()
         self.data_fetch = SinaDataFetch()
         self.index_match_dict = {}
 
@@ -84,10 +78,10 @@ class NBALive:
         return result
 
     def get_match_message_info(self, match_id):
-        result = ''
+        result = '\n\n'
         message_list = self.match_container.get_message(match_id, self.message_size)
         for message in message_list:
-            result += '{}\n'.format(message.des)
+            result += '    {}\n'.format(message.des)
         return result
 
     def select_index(self):
@@ -138,7 +132,7 @@ class NBALive:
 
 if __name__ == "__main__":
     try:
-        nba_live = NBALive('config.cfg')
+        nba_live = NBALive()
         nba_live.start()
         SysCommand.clear()
     except BaseException as e:

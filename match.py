@@ -1,6 +1,9 @@
-from util import char_util
-from log.logger import LoggerFactory
 import functools
+
+from log.logger import LoggerFactory
+from util import char_util
+from match_status import MatchStatus
+
 
 @functools.total_ordering
 class Message:
@@ -22,7 +25,7 @@ class Message:
 
 class Match:
     """
-    比赛
+    比赛，对应一场具体的比赛
     """
 
     def __init__(self, match_id, date, time, status, home_team, visiting_team, home_team_score, visiting_team_score):
@@ -38,9 +41,15 @@ class Match:
         self.message_list = []
 
     def add_message(self, message_list: list):
+        """
+        向 message 列表中添加消息
+        :param message_list: 要填加的消息列表
+        :return: None
+        """
         if not message_list:
             return
         if self.message_list:
+            message_list.sort()
             ctime = 0
             for message in self.message_list:
                 if message.message_id:
@@ -48,22 +57,41 @@ class Match:
 
             for message in message_list:
                 if message.ctime and message.ctime > ctime:
-                    ctime = max(ctime, message.ctime)
                     self.message_list.append(message)
-                    self.logger.info(
-                        'message_id {}, message.message_id:{}, message_des:{}'.format(ctime, message.ctime,
-                                                                                      message.des))
+                    self.logger.debug('max ctime {}, message.ctime:{}, message_des:{}'
+                                      .format(ctime, message.ctime, message.des))
         else:
             self.message_list.extend(message_list)
-            self.message_list.sort()
         self.logger.info('after add message message size {}'.format(len(self.message_list)))
 
     def update_score(self, home_team_score, visiting_team_score):
+        """
+        更新比赛的比分
+        :param home_team_score: 主队分数
+        :param visiting_team_score: 客队分数
+        :return:
+        """
         self.home_team_score = home_team_score
         self.visiting_team_score = visiting_team_score
 
     def get_score(self):
+        """
+        获取主队和客队比分
+        :return: (主队分数，客队分数)
+        """
         return self.home_team_score, self.visiting_team_score
 
     def get_ton_n_message(self, n: int):
+        """
+        获取最新的n个消息
+        :param n: 消息个数
+        :return:
+        """
         return self.message_list[-n:]
+
+    def has_closed(self):
+        """
+        比赛是否已经结束
+        :return:
+        """
+        return self.status == MatchStatus.closed.name
