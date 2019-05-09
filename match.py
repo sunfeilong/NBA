@@ -1,8 +1,8 @@
 import functools
 
+from enums.match_status import MatchStatus
 from log.logger import LoggerFactory
 from util import char_util
-from match_status import MatchStatus
 
 
 @functools.total_ordering

@@ -1,0 +1,7 @@
+README.md
+nba_live.py
+setup.py
+NBA_live.egg-info/PKG-INFO
+NBA_live.egg-info/SOURCES.txt
+NBA_live.egg-info/dependency_links.txt
+NBA_live.egg-info/top_level.txt

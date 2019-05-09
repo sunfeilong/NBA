@@ -1,5 +1,5 @@
+from enums.match_status import MatchStatus
 from match import Match
-from match_status import MatchStatus
 
 
 class MatchContainer:

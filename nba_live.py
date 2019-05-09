@@ -3,9 +3,10 @@ import os
 import time
 
 from date_fetch import SinaDataFetch
+from enums.match_status import MatchStatus
+from enums.order_enum import OrderEnum
 from log.logger import LoggerFactory
 from match_container import MatchContainer
-from match_status import MatchStatus
 from project_config import ProjectConfig
 from task.get_match_data_task import GetMatchDataTask
 from task.get_match_message_task import GetMatchMessageTask
@@ -17,6 +18,7 @@ class NBALive:
         self.logger = LoggerFactory.get_logger("NBALive")
         self.delay = ProjectConfig.get_fetch_message_delay()
         self.message_size = ProjectConfig.get_show_message_size()
+        self.message_order = ProjectConfig.get_message_order()
         self.data_fetch = SinaDataFetch()
         self.index_match_dict = {}
 
@@ -31,7 +33,7 @@ class NBALive:
         if self.get_match_data_task:
             return
         else:
-            get_match_data_task = GetMatchDataTask(self.match_container, self.data_fetch)
+            get_match_data_task = GetMatchDataTask(self.delay, self.match_container, self.data_fetch)
             get_match_data_task.setName("get data task")
             get_match_data_task.start()
             # 等待拉取比赛列表任务完成
@@ -80,6 +82,8 @@ class NBALive:
     def get_match_message_info(self, match_id):
         result = '\n\n'
         message_list = self.match_container.get_message(match_id, self.message_size)
+        if OrderEnum.asc.name == self.message_order:
+            message_list = reversed(message_list)
         for message in message_list:
             result += '    {}\n'.format(message.des)
         return result

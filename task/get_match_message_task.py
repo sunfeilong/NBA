@@ -22,6 +22,6 @@ class GetMatchMessageTask(threading.Thread):
             message_list = self.data_fetch.fetch_message_list(self.match_id)
             self.match_container.add_message(self.match_id, message_list)
             self.logger.info('add message to {}, message size:{}'.format(self.match_id, len(message_list)))
-            time.sleep(self.delay)
+            time.sleep(max(5, self.delay))
         self.logger.info('GetMatchMessageTask has end, fetch times [{}], task name:[{}]'
                          .format(self.fetch_times, threading.current_thread().name))
