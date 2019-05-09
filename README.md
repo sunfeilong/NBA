@@ -24,6 +24,7 @@
 	* logDir：日志目录。
 	* delay: 每隔多少秒拉取一次。
 	* showMessageSize：展示比赛信息的条数。
+	* messageOrder：asc 最新的在下面，其它最新的在上面 
 
 ## 效果图
 
