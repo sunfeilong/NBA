@@ -60,21 +60,24 @@ class NBALive:
             width = 100
         result = '-' * width
         index = 1
-        for match in self.match_container.get_match_list():
-            match_format = '\n[{:>2} ]: {:>5} {:<3}VS{:>3} 当前比分: {:<3}:{:>3} 比赛状态:[{:>4}] ' \
-                .format(index,
-                        match.time,
-                        match.home_team,
-                        match.visiting_team,
-                        match.home_team_score,
-                        match.visiting_team_score,
-                        MatchStatus.get_des(match.status))
-            self.index_match_dict[index] = match.match_id
-            length = math.ceil(len(match_format) / width) * width
-            result += match_format
-            result += ' ' * (length - len(match_format) - 1)
-            result += '\n'
-            index += 1
+        if self.match_container.get_match_list():
+            for match in self.match_container.get_match_list():
+                match_format = '\n[{:>2} ]: {:>5} {:<3}VS{:>3} 当前比分: {:<3}:{:>3} 比赛状态:[{:>4}] ' \
+                    .format(index,
+                            match.time,
+                            match.home_team,
+                            match.visiting_team,
+                            match.home_team_score,
+                            match.visiting_team_score,
+                            MatchStatus.get_des(match.status))
+                self.index_match_dict[index] = match.match_id
+                length = math.ceil(len(match_format) / width) * width
+                result += match_format
+                result += ' ' * (length - len(match_format) - 1)
+                result += '\n'
+                index += 1
+        else:
+            result += ' ' * int(width / 2) + '没有比赛数据'
         result += '-' * width
         result += '\n'
         return result
@@ -82,10 +85,13 @@ class NBALive:
     def get_match_message_info(self, match_id):
         result = '\n\n'
         message_list = self.match_container.get_message(match_id, self.message_size)
-        if OrderEnum.asc.name == self.message_order:
-            message_list = reversed(message_list)
-        for message in message_list:
-            result += '    {}\n'.format(message.des)
+        if message_list:
+            if OrderEnum.asc.name == self.message_order:
+                message_list = reversed(message_list)
+            for message in message_list:
+                result += '    {}\n'.format(message.des)
+        else:
+            result += 'loading ... ...'
         return result
 
     def select_index(self):
