@@ -7,7 +7,7 @@ class ProjectConfig:
     """
 
     config_parse = configparser.ConfigParser()
-    config_parse.read('config.cfg')
+    config_parse.read('config.cfg', encoding='UTF-8')
     task_section = config_parse.sections()[0]
     match_section = config_parse.sections()[1]
     log_section = config_parse.sections()[2]
@@ -35,3 +35,11 @@ class ProjectConfig:
         :return:
         """
         return ProjectConfig.config_parse.getint(ProjectConfig.match_section, 'showMessageSize')
+
+    @staticmethod
+    def get_message_order():
+        """
+        获取展示顺序
+        :return:
+        """
+        return ProjectConfig.config_parse.get(ProjectConfig.match_section, 'messageOrder')
