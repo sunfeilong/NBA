@@ -1,4 +1,6 @@
 import json
+import datetime
+import time
 
 from match import Match
 from match import Message
@@ -77,9 +79,12 @@ class SinaDataFetch(DataFetch):
         for data in data_list:
             try:
                 if not data['match']['phase']:
-                    des = '                        {:>2}: {:}'.format(data['liver']['nickname'], data['text'])
+                    des = '[                           ] {:>2}: {:}'.format(data['liver']['nickname'], data['text'])
                 else:
-                    des = '[{} 比分:({:<3}:{:>3})] {:>2}: {:}'.format(
+                    time_localtime = time.localtime(int(data['ctime']))
+                    curr_time = '{}:{}'.format(time_localtime.tm_hour, time_localtime.tm_min)
+                    des = '[{:>5}][{} 比分:({:<3}:{:>3})] {:>2}: {:}'.format(
+                        curr_time,
                         data['match']['phase'],
                         data['match']['score1'],
                         data['match']['score2'],
