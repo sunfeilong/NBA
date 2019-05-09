@@ -31,17 +31,25 @@ class SinaDataFetch(DataFetch):
     def __init__(self):
         self.http = HttpRequestUtil()
         self.logger = LoggerFactory.get_logger('SinaDataFetch')
-        self.game_list_address = 'https://slamdunk.sports.sina.com.cn/api?p=radar&s=schedule&a=day&date={}&callback=dayCallback'
+        self.match_list_address = 'https://slamdunk.sports.sina.com.cn/api?p=radar&s=schedule&a=day&date={}&callback=dayCallback'
         self.data_live_address = 'https://slamdunk.sports.sina.com.cn/api?p=radar&s=boxscore&a=match&callback=cb_matchInfo_f23b83f6_2343_4ee2_8419_8ed143d954c1&mid={}&dpc=1'
         self.data_sport_address = 'http://rapid.sports.sina.com.cn/live/api/live/room?callback=cb_f23b83f6_2343_4ee2_8419_8ed143d954c1&match_id={}&dpc=1'
         self.data_list_address = 'http://rapid.sports.sina.com.cn/live/api/msg/index?callback=cb_livercast_f23b83f6_2343_4ee2_8419_8ed143d954c1&room_id={}&count=30&msg_id=''&direct=-1&dpc=1'
 
     def fetch_match_list(self, date) -> list:
         try:
-            response = self.http.get(self.game_list_address.format(date))
-            return self._parse_game_list(response)
+            response = self.http.get(self.match_list_address.format(date))
+            game_list = self._parse_match_list(response)
+
+            # log
+            match_info = []
+            for match in game_list:
+                match_info.append((match.match_id, match.home_team))
+            self.logger.info('fetch_match_list, match info:{} '.format(match_info))
+
+            return game_list
         except BaseException as e:
-            self.logger.error('get_match_list exception {}'.format(e))
+            self.logger.error('fetch_match_list exception {}'.format(e))
 
     def fetch_message_list(self, match_id) -> list:
         try:
@@ -49,14 +57,15 @@ class SinaDataFetch(DataFetch):
             live_id = self._get_live_id(live_response)
             sport_response = self.http.get(self.data_sport_address.format(live_id))
             sport_id = self._get_sport_id(sport_response)
-            data_response = self.http.get(self.data_list_address.format(sport_id))
-            data_list = self._get_message_list(data_response)
-            return data_list
+            message_response = self.http.get(self.data_list_address.format(sport_id))
+            message_list = self._get_message_list(message_response)
+            self.logger.info('fetch_message_list, match id: {} , message length: {} '.format(match_id, len(message_list)))
+            return message_list
         except BaseException as e:
             self.logger.error('fetch_message_list exception {}'.format(e))
         return []
 
-    def _parse_game_list(self, game_list_response):
+    def _parse_match_list(self, game_list_response):
         result = []
         try:
             json_data = json.loads(self._get_json_text_from(game_list_response))
