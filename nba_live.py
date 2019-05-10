@@ -86,7 +86,7 @@ class NBALive:
         result = '\n\n'
         message_list = self.match_container.get_message(match_id, self.message_size)
         if message_list:
-            if OrderEnum.asc.name == self.message_order:
+            if not OrderEnum.asc.name == self.message_order:
                 message_list = reversed(message_list)
             for message in message_list:
                 result += '    {}\n'.format(message.des)
