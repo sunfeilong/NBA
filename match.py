@@ -48,8 +48,9 @@ class Match:
         """
         if not message_list:
             return
+        
+        message_list.sort()
         if self.message_list:
-            message_list.sort()
             ctime = 0
             for message in self.message_list:
                 if message.message_id:
