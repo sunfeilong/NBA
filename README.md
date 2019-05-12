@@ -1,12 +1,12 @@
 ## 项目介绍
 
-基于 Python3 标准库开发的命令行NBA文字直播。
+基于 `Python3 标准库` 开发的命令行NBA文字直播工具。
 
 数据来源：[新浪NBA](http://sports.sina.com.cn/nba/)
 
 ## 使用 
 
-1. 启动
+1. 启动。
 
 		git clone https://github.com/command-line-util/NBA-Text-Live.git
 		cd NBA-Text-Live/
@@ -17,14 +17,14 @@
 
 ## 项目结构  
 
-1. 接口放回的模板数据在 [json](./json) 目录。
+1. 新浪接口的模板数据在 [json](./json) 目录。
 2. 日志工厂类在 [log](./log) 目录。
 3. 配置信息在 [config.cfg](config.cfg) 文件中。
 
 	* logDir：日志目录。
 	* delay: 每隔多少秒拉取一次。
 	* showMessageSize：展示比赛信息的条数。
-	* messageOrder：asc 最新的在下面，其它最新的在上面 
+	* messageOrder：比赛消息展示模式。`asc` 最新的在下面，其它配置最新的在上面。
 
 ## 效果图
 
