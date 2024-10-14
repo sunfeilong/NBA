@@ -8,7 +8,7 @@
 
 1. 启动。
 
-		git clone https://github.com/command-line-util/NBA-Text-Live.git
+		git clone https://github.com/sunfeilong/NBA.git
 		cd NBA-Text-Live/
 		python3 nba_live.py
 
