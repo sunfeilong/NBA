@@ -9,7 +9,7 @@
 1. 启动。
 
 		git clone https://github.com/sunfeilong/NBA.git
-		cd NBA-Text-Live/
+		cd NBA/
 		python3 nba_live.py
 
 2. 输入序号选择比赛。
